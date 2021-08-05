@@ -8,6 +8,7 @@ MSG="ᕲ DuinoCoin"
 # PWB="Powered by azagramac"
 JSON=$(curl -s -X GET https://server.duinocoin.com/users/$WALLET -H "Accept: application/json" | jq .)
 #EURO=$(curl -s -X GET http://www.floatrates.com/daily/usd.json -H "Accept: application/json" | jq .eur | jq '.rate')
+USR=$(echo $JSON | jq '.result.balance.username')
 BALANCE=$(echo $JSON | jq '.result.balance.balance')
 WORKERS=$(echo $JSON | jq '.result.miners' | jq '.[].identifier')
 NUMBER_WORKERS=$(echo $JSON | jq -r '.result.miners' | jq -r '.[].identifier' | wc -l)

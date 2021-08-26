@@ -1,17 +1,17 @@
 # DuinoCoinTelegramBot
 
 ### Create bot, and get token bot:
-- https://t.me/botfather
+- https://t.me/botfather    (create bot and copy token bot)
 
 ### Get chat ID:
-- https://t.me/myidbot
+- https://t.me/myidbot      (to get chat ID and copy chat ID)
 
 Change in the script, the variables token, id and the username of your duinocoin wallet.
 
 ```
-TOKEN="YOUR_TOKEN_BOT"
-ID="YOUR_CHAT_ID"
-WALLET="YOUR_USERNAME_WALLET"
+TOKEN="YOUR_TOKEN_BOT"          (change YOUR_TOKEN_BOT with copied token bot)
+ID="YOUR_CHAT_ID"               (change YOUR_CHAT_ID with copied chat ID)
+WALLET="YOUR_USERNAME_WALLET"   (change YOUR_USERNAME_WALLET with your username wallet)
 ```
 
 ### Install package

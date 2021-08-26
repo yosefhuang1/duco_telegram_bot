@@ -26,4 +26,4 @@ WALLET="YOUR_USERNAME_WALLET"
 ### Add cron, in this example, it runs every hour, every day of the week.  
 `crontab -e`
 
-`0 * * * *  /path/to/script/duinocoin.sh >/dev/null 2>&1`
+`0 * * * *  /path/to/script/duinocoin.sh`

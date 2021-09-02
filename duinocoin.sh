@@ -25,7 +25,7 @@ else
         /usr/bin/curl -s -X POST $URL \
                 -d chat_id=$ID \
                 -d parse_mode=HTML \
-                -d text="$(printf "$MSG\n\t \U1F4B3 ID: <code>$USR</code>\n\t \U2705 Verify: <code>$VERIFYCHECK</code>\n\t \U1FA99 Balance: <code>$FORMAT1 ᕲ</code>\n\t \U0024 Duco Price: <code>$DUCOPRICE ᕲ</code>\n\t \U26CF Nº Workers $NUMBER_WORKERS:\n<code>$WORKERS</code>")" \
+                -d text="$(printf "$MSG\n\t \U1F4B3 ID: <code>$USR</code>\n\t \U2705 Verify: <code>$VERIFYCHECK</code>\n\t \U1FA99 Balance: <code>$FORMAT1 ᕲ</code>\n\t \U1F4B0 Duco Price: <code>$DUCOPRICE ᕲ</code>\n\t \U26CF Nº Workers $NUMBER_WORKERS:\n<code>$WORKERS</code>")" \
                 > /dev/null 2>&1
         exit 0
 fi

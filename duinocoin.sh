@@ -18,6 +18,7 @@ FORMAT1=$(echo "scale=2; $BALANCE/1" | bc -l)
 #FORMAT2=$(echo "scale=2; $EURO/1" | bc -l)
 DUCOPRICE=$(echo $APIJSON | jq '."Duco price"')
 XRP=$(echo $APIJSON | jq '."Duco price XRP"')
+TRX=$(echo $APIJSON | jq '."Duco price TRX"')
 
 if [ $? -ne 0 ]
 then
@@ -26,7 +27,7 @@ else
         /usr/bin/curl -s -X POST $URL \
                 -d chat_id=$ID \
                 -d parse_mode=HTML \
-                -d text="$(printf "$MSG\n\t \U1F4B3 ID: <code>$USR</code>\n\t \U2705 Verify: <code>$VERIFYCHECK</code>\n\t \U1FA99 Balance: <code>$FORMAT1 ᕲ</code>\n\t \U1F4B0 Duco Price: <code>$DUCOPRICE</code>\n\t \U1F4B0 XRP: <code>$XRP</code>\n\t \U26CF Nº Workers $NUMBER_WORKERS:\n<code>$WORKERS</code>")" \
+                -d text="$(printf "$MSG\n\t \U1F4B3 ID: <code>$USR</code>\n\t \U2705 Verify: <code>$VERIFYCHECK</code>\n\t \U1FA99 Balance: <code>$FORMAT1 ᕲ</code>\n\t \U1F4B0 Duco Price: <code>$DUCOPRICE</code>\n\t \U1F4B0 XRP: <code>$XRP</code>\n\t \U1F4B0 TRX: <code>$TRX</code>\n\t \U26CF Nº Workers $NUMBER_WORKERS:\n<code>$WORKERS</code>")" \
                 > /dev/null 2>&1
         exit 0
 fi
